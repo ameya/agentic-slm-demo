@@ -1,0 +1,10 @@
+# Core dependencies
+requests==2.32.3
+ipwhois==1.2.0
+
+# Optional: if using Jupyter for testing
+# jupyterlab
+
+# Note: Ollama must be installed separately from https://ollama.ai
+# and you should pull the LLaMA 3.2 1B model with:
+#   ollama pull llama3.2:1b
