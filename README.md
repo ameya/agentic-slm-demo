@@ -74,28 +74,27 @@ Run the agent script:
 {
   "Prompt": "Where is this IP located?",
   "IP": "8.8.8.8",
-  "Tool Chosen": "geoip_lookup",
+  "Tool Chosen": "whois_lookup",
   "Expected Tool": "geoip_lookup",
+  "Correct?": false,
+  "Tool Output": "WHOIS: GOOGLE, US"
+}
+{
+  "Prompt": "Who owns this IP address?",
+  "IP": "8.8.4.4",
+  "Tool Chosen": "whois_lookup",
+  "Expected Tool": "whois_lookup",
   "Correct?": true,
-  "Tool Output": "GEOIP: Mountain View, US"
+  "Tool Output": "WHOIS: GOOGLE, US"
 }
 {
   "Prompt": "Is this IP malicious?",
   "IP": "123.45.67.89",
-  "Tool Chosen": "geoip_lookup",
+  "Tool Chosen": "whois_lookup",
   "Expected Tool": "reputation_check",
   "Correct?": false,
-  "Tool Output": "GEOIP: Seoul, KR"
+  "Tool Output": "WHOIS: NA"
 }
-{
-  "Prompt": "Which country is this IP from?",
-  "IP": "1.1.1.1",
-  "Tool Chosen": "whois_lookup",
-  "Expected Tool": "geoip_lookup",
-  "Correct?": false,
-  "Tool Output": "WHOIS: CLOUDFLARENET, US"
-}
-
 Process finished with exit code 0
 
 ```
@@ -115,3 +114,4 @@ This highlights the challenge of tool selection in Agentic AI systems.
 ## LLaMA 3.2 1B is a tiny model → mistakes are expected (and useful for demo!).
 
 Replace the AbuseIPDB key in agent.py with your own.
+
